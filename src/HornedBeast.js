@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup } from "react-bootstrap";
+import ListGroup from "react-bootstrap/ListGroup";
 import Card from 'react-bootstrap/Card'
 
 
@@ -20,18 +20,20 @@ class HornedBeast extends React.Component {
       Count: this.state.Count + 1
     
     })
+    this.props.handleShowModal(this.props.title, this.props.image_url, this.props.description)
   }
-
-
-
+  
 
   render() {
     return (
-      <div class="Beast" key={this.props.index}>
+      <div className="Beast" key={this.props.index}>
 
         <Card style={{ width: '18rem', height: 'fit-content'}}>
           <Card.Title as="h2" >{this.props.title}</Card.Title>
-          <Card.Img varient="top" src={this.props.image_url} alt={this.props.alt} title={this.props.title} onClick={this.handleFavorite}/>
+          
+          <img src={this.props.image_url} alt={this.props.description} onClick={this.handleFavorite}/>
+          {/* onClick={this.handleFavorite}  */}
+
           <Card.Title as="h3" >Info:</Card.Title>
           <Card.Text>Number of favorites {this.state.Count + "❤️"}</Card.Text>
           <Card.Text>{this.props.description}</Card.Text>

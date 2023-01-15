@@ -14,6 +14,7 @@ class Main extends React.Component {
        keyword={hornedBeast.keyword}
        horns={hornedBeast.horns} 
        key={index}
+       handleShowModal={this.props.handleShowModal}
        />
        )}
       </main>
