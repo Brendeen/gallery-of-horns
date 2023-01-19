@@ -32,7 +32,6 @@ class HornedBeast extends React.Component {
           <Card.Title as="h2" >{this.props.title}</Card.Title>
           
           <img src={this.props.image_url} alt={this.props.description} onClick={this.handleFavorite}/>
-          {/* onClick={this.handleFavorite}  */}
 
           <Card.Title as="h3" >Info:</Card.Title>
           <Card.Text>Number of favorites {this.state.Count + "❤️"}</Card.Text>
