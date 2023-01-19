@@ -54,12 +54,25 @@ main{
   color: black;
   text-shadow: none;
   box-shadow: #61dafb;
+  cursor: default;
 }
 
 img {
   height: 110px;
   width: auto;
+  cursor:zoom-in;
+  border: dashed black 3px;
 }
+
+img :hover {
+  box-shadow:
+  1px 1px #53a7ea,
+  2px 2px #53a7ea,
+  3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
 
 footer{
   background-color: #61dafb;
@@ -71,7 +84,6 @@ footer{
 }
 
 #root {
-  background-color: blue;
   color: white;
   border: grey solid 5px;
   text-shadow: 8px 8px 10px #0000008c;
@@ -81,10 +93,26 @@ footer{
 
 
 .modal {
+  display: flex;
+  flex-direction: row;
   text-align: center;
 }
 
 .modalImg {
   width: 250px;
   height: auto;
+  border: solid black 7px;
+  border-radius: 10px;
+  cursor: default;
+}
+
+.form-select {
+  background-color: #61dafb;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: solid black 5px;
+  border-radius: 8px;
+  text-shadow: 10px 10px 10px #0000008c;
 }
